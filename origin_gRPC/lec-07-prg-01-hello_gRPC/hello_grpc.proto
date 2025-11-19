@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+service MyService {
+    rpc MyFunction(MyNumber) returns (MyNumber) {}
+}
+
+message MyNumber {
+    int32 value = 1;
+}
