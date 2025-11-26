@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = ".;main";
+
 service MyService {
     rpc MyFunction(MyNumber) returns (MyNumber) {}
 }
