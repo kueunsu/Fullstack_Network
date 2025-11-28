@@ -4,7 +4,7 @@
 // 	protoc        v6.33.1
 // source: hello_grpc.proto
 
-package main
+package hellopb
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -69,12 +69,12 @@ var File_hello_grpc_proto protoreflect.FileDescriptor
 
 const file_hello_grpc_proto_rawDesc = "" +
 	"\n" +
-	"\x10hello_grpc.proto\" \n" +
+	"\x10hello_grpc.proto\x12\ahellopb\" \n" +
 	"\bMyNumber\x12\x14\n" +
-	"\x05value\x18\x01 \x01(\x05R\x05value21\n" +
-	"\tMyService\x12$\n" +
+	"\x05value\x18\x01 \x01(\x05R\x05value2A\n" +
+	"\tMyService\x124\n" +
 	"\n" +
-	"MyFunction\x12\t.MyNumber\x1a\t.MyNumber\"\x00B\bZ\x06.;mainb\x06proto3"
+	"MyFunction\x12\x11.hellopb.MyNumber\x1a\x11.hellopb.MyNumber\"\x00B\x1cZ\x1ahello_grpc_example/hellopbb\x06proto3"
 
 var (
 	file_hello_grpc_proto_rawDescOnce sync.Once
@@ -90,11 +90,11 @@ func file_hello_grpc_proto_rawDescGZIP() []byte {
 
 var file_hello_grpc_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_hello_grpc_proto_goTypes = []any{
-	(*MyNumber)(nil), // 0: MyNumber
+	(*MyNumber)(nil), // 0: hellopb.MyNumber
 }
 var file_hello_grpc_proto_depIdxs = []int32{
-	0, // 0: MyService.MyFunction:input_type -> MyNumber
-	0, // 1: MyService.MyFunction:output_type -> MyNumber
+	0, // 0: hellopb.MyService.MyFunction:input_type -> hellopb.MyNumber
+	0, // 1: hellopb.MyService.MyFunction:output_type -> hellopb.MyNumber
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

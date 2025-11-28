@@ -4,7 +4,7 @@
 // - protoc             v6.33.1
 // source: hello_grpc.proto
 
-package main
+package hellopb
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	MyService_MyFunction_FullMethodName = "/MyService/MyFunction"
+	MyService_MyFunction_FullMethodName = "/hellopb.MyService/MyFunction"
 )
 
 // MyServiceClient is the client API for MyService service.
@@ -108,7 +108,7 @@ func _MyService_MyFunction_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var MyService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "MyService",
+	ServiceName: "hellopb.MyService",
 	HandlerType: (*MyServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
