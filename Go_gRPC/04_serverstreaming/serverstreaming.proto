@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package serverstreaming;
+package serverpb;
+
+option go_package = "serverstreaming/serverpb";
 
 service ServerStreaming {
   // A Client streaming RPC.

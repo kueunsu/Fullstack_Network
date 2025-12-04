@@ -1,10 +1,14 @@
 syntax = "proto3";
 
-package clientstreaming;
+package clientpb; 
+
+// go mod init 할 때 모듈 이름을 clientstreaming 으로 쓴다고 가정한 경로
+option go_package = "clientstreaming/clientpb";
 
 service ClientStreaming {
-  // A Client streaming RPC.
-   rpc GetServerResponse(stream Message) returns (Number) {}
+  // Client streaming RPC
+  // 클라이언트가 Message 스트림을 보내고, 서버는 Number 하나로 응답
+  rpc GetServerResponse (stream Message) returns (Number) {}
 }
 
 message Message {
