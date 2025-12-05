@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package serverpb;
+package serverstreaming;
 
 option go_package = "serverstreaming/serverpb";
 
